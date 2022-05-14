@@ -1,7 +1,10 @@
 module.exports = {
   siteMetadata: {
     title: `website-2022`,
-    siteUrl: `https://www.yourdomain.tld`,
+//    siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
+  plugins: [
+	"gatsby-plugin-image",
+	"gatsby-plugin-sharp",
+ ],
 }

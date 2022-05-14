@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
 import { container, heading, navLinks, navLinkItem, navLinkText } from './layout.module.css'
+import Card from '../components/card'
 
 
 const Layout = ({ pageTitle, children }) => {
@@ -25,7 +26,11 @@ const Layout = ({ pageTitle, children }) => {
         <h1 className={heading}>
           {pageTitle}
         </h1>
-        
+        {/* <Card cardTitle="Card1">
+            // cardData="this is the data for card 1" 
+            // cardImage="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large">
+            </Card> */}
+
         {children}
       </main>
     </div>
