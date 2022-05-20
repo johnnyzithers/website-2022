@@ -1,13 +1,22 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
-import { container, heading, navLinks, navLinkItem, navLinkText } from './layout.module.css'
-import Card from '../components/card'
-
+import { Link, useStaticQuery, graphql } from 'gatsby'
+import { container, siteTitle, heading, navLinks, navLinkItem, navLinkText } from './layout.module.css'
 
 const Layout = ({ pageTitle, children }) => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
+
   return (
     <div className={container}>
       <title>{pageTitle}</title>
+      <header className={siteTitle}>{data.site.siteMetadata.title}</header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -26,11 +35,6 @@ const Layout = ({ pageTitle, children }) => {
         <h1 className={heading}>
           {pageTitle}
         </h1>
-        {/* <Card cardTitle="Card1">
-            // cardData="this is the data for card 1" 
-            // cardImage="https://pbs.twimg.com/media/E1oMV3QVgAIr1NT?format=jpg&name=large">
-            </Card> */}
-
         {children}
       </main>
     </div>

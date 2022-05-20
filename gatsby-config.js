@@ -1,10 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `website-2022`,
-//    siteUrl: `https://www.yourdomain.tld`,
+    title: `personal website of DUNCAN`,
   },
   plugins: [
 	"gatsby-plugin-image",
 	"gatsby-plugin-sharp",
+	{
+		resolve: "gatsby-source-filesystem",
+		options: {
+			name: `content`,
+			path: `${__dirname}/content/`,
+		},
+	},
+
+	"gatsby-plugin-mdx",
+	"gatsby-transformer-sharp",
  ],
-}
+};
