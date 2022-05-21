@@ -6,6 +6,11 @@
     /* flex-direction: column; */
 }
 
+
+.cardDiv {
+    width: 100%;
+}
+
 .heading {
     color: palegreen;
 }
