@@ -55,7 +55,7 @@ function TagsContainer({ tags }) {
   );
 }
 
-function Project({ title, description, imageUrl, tags, links }) {
+function Instrument({ title, description, imageUrl, tags, links }) {
   const styles = useStyles();
   return (
     <Grid item>
@@ -96,15 +96,15 @@ function Project({ title, description, imageUrl, tags, links }) {
   );
 }
 
-export default function Projects() {
+export default function Instruments() {
   return (
-    <Container maxWidth="md" id="projects">
+    <Container maxWidth="md" id="instruments">
       <Box pt={8} mb={2}>
         <Typography variant="h4"> INSTRUMENTS </Typography>
       </Box>
       <Grid container direction="column" spacing={4}>
-        {projectsData.map((data) => (
-          <Project {...data} key={data.title} />
+        {instrumentsData.map((data) => (
+          <Instrument {...data} key={data.title} />
         ))}
       </Grid>
     </Container>
@@ -112,7 +112,7 @@ export default function Projects() {
 }
 
 
-const projectsData = [
+const instrumentsData = [
 
   {
     title: "trimpin bird ",
